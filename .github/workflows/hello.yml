@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello:
     runs-on: ubuntu-latest
-    env;
+    env:
       PASSWORD: ${{ secrets.PASSWORD }}
     steps:
       - name: Hello world action step
