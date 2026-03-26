@@ -1,0 +1,17 @@
+name: Choice Trigger
+on:
+  workflow_dispatch:
+    inputs:
+      log-level:
+        type: choice
+        options:
+          - debug
+          - info
+          - warning
+          - error
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the user
+        run: echo "Hello, ${{ github.event.inputs.name }}!"
