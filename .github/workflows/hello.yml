@@ -3,8 +3,12 @@ on: [push]
 jobs:
   hello:
     runs-on: ubuntu-latest
+    env;
+      PASSWORD: ${{ secrets.PASSWORD }}
     steps:
       - name: Hello world action step
         run: echo "Hello world!"
-      - name: call action
-        uses: actions/checkout@v4
+      - name: Print the secret
+        run: echo "${PASSWORD}"
+      - name: Print the secret
+        run: echo "${PASSWORD:0:1} ${PASSWORD#?}"
