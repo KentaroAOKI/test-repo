@@ -1,7 +1,7 @@
 name: Manual Trigger
 on:
   workflow_dispatch:
-    input:
+    inputs:
       name:
         type: string
         description: 'Your name'
