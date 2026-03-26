@@ -1,11 +1,12 @@
 name: Manual Trigger
 on:
   workflow_dispatch:
-  input:
-    name:
-      description: 'Your name'
-      required: true
-      default: 'World'
+    input:
+      name:
+        type: string
+        description: 'Your name'
+        required: true
+        default: 'World'
 jobs:
   greet:
     runs-on: ubuntu-latest
